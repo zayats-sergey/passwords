@@ -1,0 +1,21 @@
+<p>reg works!</p>
+<div class="container">
+  <form [formGroup]="signin" (ngSubmit) = "userRegisterClick()"  class="signin-Formgroup">
+    <mat-form-field>
+      <input matInput placeholder="Login" [type]="hide ? 'login' : 'text'" formControlName="login" required>
+      <mat-hint *ngIf="!loginInput">Enter your login</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" [type]="hide ? 'email' : 'text'" formControlName="email" required>
+      <mat-hint *ngIf="!emailInput">Enter your email</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+         <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required autocomplete="on">
+         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+         <mat-hint *ngIf="!passwordInput">Enter your password</mat-hint>
+     </mat-form-field>
+     <button class = "btn btn-success" type = "submit">REGISTER</button>
+   </form>
+</div>
+
+

@@ -1,0 +1,49 @@
+.demo-table {
+    width: 100%;
+  }
+  
+  .mat-column-position {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+  .mat-column-userLogin {
+    padding-left: 16px;
+    font-size: 20px;
+  }
+  
+  .mat-column-nameElements {
+    font-style: italic;
+  }
+
+  .mat-column-keyString {
+    padding-left: 16px;
+    font-style: italic;
+  }
+  
+  
+  .mat-column-key {
+    width: 242px;
+    text-align: center;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-left: 20px;
+  }
+
+  .mat-column-passwordElement {
+    width: 242px;
+    text-align: center;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-left: 20px;
+  }
+
+  .btn-success{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0;
+  }

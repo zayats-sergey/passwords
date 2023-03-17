@@ -1,0 +1,63 @@
+<p>dashboard works!</p>
+
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+        </ng-container>
+      
+        <!-- userLogin Column -->
+        <ng-container matColumnDef="userLogin">
+          <th mat-header-cell *matHeaderCellDef> userLogin </th>
+          <td mat-cell *matCellDef="let element" >{{element.userLogin}}</td>
+        </ng-container>
+      
+        <!-- nameElements Column -->
+        <ng-container matColumnDef="nameElements">
+          <th mat-header-cell *matHeaderCellDef> nameElements </th>
+          <td mat-cell *matCellDef="let element"> {{element.nameElements}} </td>
+        </ng-container>
+
+         <!-- keyString Column -->
+        <ng-container matColumnDef="keyString">
+          <th mat-header-cell *matHeaderCellDef> keyString </th>
+          <td mat-cell *matCellDef="let element"> {{element.keyString}} </td>
+        </ng-container>
+      
+        <!-- key Column -->
+        <ng-container matColumnDef="key">
+          <th mat-header-cell *matHeaderCellDef> key </th>
+          <td mat-cell *matCellDef="let element">
+              {{element.key._fileNames}} 
+          </td>
+        </ng-container>
+
+        <!-- passwordElement Column -->
+        <ng-container matColumnDef="passwordElement">
+            <th mat-header-cell *matHeaderCellDef> passwordElement </th>
+            <td mat-cell *matCellDef="let element"> {{element.passwordElement}} </td>
+          </ng-container>
+
+      
+          <!-- dellElement Column -->
+          <ng-container matColumnDef="dellElement">
+            <th mat-header-cell *matHeaderCellDef> dellElement </th>
+            <td mat-cell *matCellDef="let element"> 
+              <button mat-button color="accent" class="btn"  (click) = "openDialog(element)">openDialog</button>
+            </td>
+          </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+   
+  </table>
+  <div class="logoutBtn">
+    <button class = "btn btn-success" type = "submit" (click) = "logoutUser()">EXIT</button>
+</div>
+
+
+

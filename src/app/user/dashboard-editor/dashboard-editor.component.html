@@ -1,0 +1,54 @@
+<p>dashboard-editor works!</p>
+
+<div class="container">
+    <form [formGroup]="profileFormPassword" (ngSubmit) = "passwordRegisterClick()"  class="signin-Formgroup"  method="post" enctype="multipart/form-data">
+      <mat-form-field>
+        <input matInput placeholder="position" [type]="hide ? 'position' : 'text'" formControlName="position" required>
+        <mat-hint *ngIf="!positionInput">Enter your position</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="userLogin" [type]="hide ? 'userLogin' : 'text'" formControlName="userLogin" required>
+        <mat-hint *ngIf="!userLoginInput">Enter your userLogin</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="nameElements" [type]="hide ? 'nameElements' : 'text'" formControlName="nameElements" required>
+        <mat-hint *ngIf="!nameElementsInput">Enter your nameElements</mat-hint>
+      </mat-form-field>
+      <mat-form-field >
+          <div>
+            <ngx-mat-file-input 
+            placeholder="key" 
+            type="file" 
+            formControlName="key"
+            [accept]="'.ZS2'" 
+            ></ngx-mat-file-input>
+          </div>
+      <mat-hint *ngIf="!keyInput || !keyStringInput">Enter your key</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="keyString" [type]="hide ? 'keyString' : 'text'" formControlName="keyString" required>
+        <mat-hint *ngIf="!keyStringInput || !keyInput">Enter your keyString</mat-hint>
+      </mat-form-field>
+
+      
+      <mat-form-field>
+           <input matInput placeholder="passwordElement" [type]="hide ? 'password' : 'text'" formControlName="passwordElement" required autocomplete="on">
+           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+           <mat-hint *ngIf="!passwordElementInput">Enter your passwordElement</mat-hint>
+       </mat-form-field>
+       <button class = "btn btn-success" type = "submit">REGISTER Element</button>
+     </form>
+  </div>
+  
+  <!-- <form method="post" enctype="multipart/form-data">
+    <div>
+      <label for="file">Choose file to upload</label>
+      <input type="file" id="file" name="file" multiple>
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+   </form> -->
+  
+  
